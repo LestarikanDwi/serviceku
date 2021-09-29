@@ -5,6 +5,24 @@ void main() {
   runApp(MyApp());
 }
 
+class CobaApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        title: "Coba",
+        home: Scaffold(
+          appBar:AppBar(title:Text("coba")),
+          body: Row(children: [
+            Container(
+              color: Colors.yellow,
+              child: Text("Coba baris 1"),
+            ),
+            Container(color: Colors.red,child: Text("Baris 2"),)
+          ],)
+        ));
+  }
+}
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
