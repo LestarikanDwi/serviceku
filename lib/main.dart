@@ -2,7 +2,7 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(CobaApp());
 }
 
 class CobaApp extends StatelessWidget {
@@ -11,15 +11,25 @@ class CobaApp extends StatelessWidget {
     return MaterialApp(
         title: "Coba",
         home: Scaffold(
-          appBar:AppBar(title:Text("coba")),
-          body: Row(children: [
-            Container(
-              color: Colors.yellow,
-              child: Text("Coba baris 1"),
-            ),
-            Container(color: Colors.red,child: Text("Baris 2"),)
-          ],)
-        ));
+            appBar: AppBar(title: Text("coba")),
+            body: Row(
+              children: [
+               Expanded (
+                  flex: 6,
+                  child: Container( color: Colors.yellow,
+                  child: Text ("Ini diisi Gambar"),
+                  ),
+                ),
+                Expanded (
+                  flex: 4,
+                  child: Column (children: [
+                    Expanded(child: Container (color: Colors.red )),
+                    Expanded(child: Container (color: Colors.blue )),
+                    ],
+                  )
+                )
+              ],
+            )));
   }
 }
 
