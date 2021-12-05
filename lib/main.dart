@@ -15,15 +15,19 @@ class CobaApp extends StatelessWidget {
             body: Row(
               children: [
                Expanded (
-                  flex: 6,
+                  flex: 4,
                   child: Container( color: Colors.yellow,
                   child: Text ("Ini diisi Gambar"),
                   ),
                 ),
                 Expanded (
-                  flex: 4,
+                  flex: 6,
                   child: Column (children: [
-                    Expanded(child: Container (color: Colors.red )),
+                  Expanded (child:Row (children : [
+                    Expanded(flex : 5 , child: Container (color: Colors.red )),
+                     Expanded(flex : 5 , child: Container (color: Colors.green ))
+                  ])),
+                    
                     Expanded(child: Container (color: Colors.blue )),
                     ],
                   )
